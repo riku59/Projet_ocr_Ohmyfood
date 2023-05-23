@@ -16,6 +16,7 @@
     }
     .card-menu1-head {
         display: flex;
+        align-items: center;
         label {
             position: absolute;
             top: 40px;
@@ -117,7 +118,8 @@
     .card-menu1 {
     align-items: center;
     .card-menu1-head label {
-        right: 250px;
+        position: static;
+        margin-left: 24px;
     }
     .card-choice .card-menu{
         width: 634px;

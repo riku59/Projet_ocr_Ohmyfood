@@ -76,11 +76,14 @@ header .header h1 {
   font-size: 24px;
   font-weight: 700;
   padding-top: 39px;
+  width: 75%;
+  margin: 0 auto;
 }
 header .header p {
   color: #353535;
   font-size: 18px;
-  margin: 12px 0 27px;
+  margin: 12px auto 27px;
+  width: 87%;
 }
 header .header button {
   font-size: 16px;
@@ -107,7 +110,12 @@ header .header button:hover {
 .fonction h2 {
   padding: 48px 20px 26px;
 }
-.fonction .explain1 {
+.fonction .explain {
+  display: flex;
+  flex-direction: column;
+  margin-left: 25px;
+}
+.fonction .explain .explain1 {
   position: relative;
   display: flex;
   align-items: center;
@@ -117,11 +125,11 @@ header .header button:hover {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   margin-bottom: 25px;
-  margin-left: 32px;
-  width: 85%;
+  width: 95%;
+  max-width: 700px;
   height: 72px;
 }
-.fonction .explain1:first-child::before {
+.fonction .explain .explain1:first-child::before {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -135,7 +143,7 @@ header .header button:hover {
   font-size: 14px;
   content: "1";
 }
-.fonction .explain1:nth-child(2)::before {
+.fonction .explain .explain1:nth-child(2)::before {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -149,7 +157,7 @@ header .header button:hover {
   font-size: 14px;
   content: "2";
 }
-.fonction .explain1:last-child::before {
+.fonction .explain .explain1:last-child::before {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -163,16 +171,16 @@ header .header button:hover {
   font-size: 14px;
   content: "3";
 }
-.fonction .explain1:last-child i {
+.fonction .explain .explain1:last-child i {
   color: #9356DC;
 }
-.fonction .explain1 p {
+.fonction .explain .explain1 p {
   font-weight: 500;
 }
-.fonction .explain1 i {
+.fonction .explain .explain1 i {
   color: #7e7e7e;
 }
-.fonction .explain1 .fa-solid {
+.fonction .explain .explain1 .fa-solid {
   font-size: 20px;
 }
 
@@ -181,19 +189,20 @@ header .header button:hover {
   background: #f7f7f7;
   padding-bottom: 66px;
 }
+.restaurant h2 {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
 .restaurant .restaurants {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  align-items: center;
 }
 .restaurant .restaurants .card {
   display: flex;
   flex-direction: column;
-  width: 85%;
-  margin: 0 20px;
-}
-.restaurant .restaurants .card h2 {
-  margin-bottom: 20px;
+  width: 90%;
 }
 .restaurant .restaurants .card .card1 {
   position: relative;
@@ -268,6 +277,13 @@ header .header button:hover {
   font-size: 14px;
 }
 
+@media (min-width: 767px) {
+  .restaurant .restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
 footer {
   background: #353535;
   color: white;
@@ -349,6 +365,7 @@ footer .link i {
 }
 .card-menu1 .card-menu1-head {
   display: flex;
+  align-items: center;
 }
 .card-menu1 .card-menu1-head label {
   position: absolute;
@@ -450,7 +467,8 @@ footer .link i {
     align-items: center;
   }
   .card-menu1 .card-menu1-head label {
-    right: 250px;
+    position: static;
+    margin-left: 24px;
   }
   .card-menu1 .card-choice .card-menu {
     width: 634px;

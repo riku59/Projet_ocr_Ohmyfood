@@ -2,20 +2,21 @@
     padding: 54px 0 ;
     background: $gray1;
     padding-bottom: 66px;
+     h2 {
+        margin-bottom: 20px;  
+        margin-left: 20px;
+        }
     .restaurants {
         display: flex;
         flex-direction: column;
         gap: 18px;
+        align-items: center;
     
    .card {
         display: flex;
         flex-direction: column;
-        width: 85%;
-        margin: 0 20px;
-        h2 {
-            margin-bottom: 20px;
-            
-        }
+        width: 90%;
+       
         .card1 {
             position: relative;
             background: white;
@@ -59,4 +60,14 @@
         }
     }
     }
+}
+@media (min-width: 767px) {
+    .restaurant {
+
+    .restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+}
 }

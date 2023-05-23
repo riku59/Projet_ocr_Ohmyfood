@@ -1,0 +1,16 @@
+.rect {
+    height: 1200px;
+}
+.footer1 {
+    @include footer ;
+    z-index: 1;
+}
+@media (min-width: 767px) {
+    .footer1 {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+}

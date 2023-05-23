@@ -1,0 +1,19 @@
+.return {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 63px;
+    i {
+        position: absolute;
+        left: 25px;
+        top: 23px;
+        font-size: 1.3rem;
+        color: black;
+        
+    }
+}
+.backgroundLaPalette {
+    background: url(/assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) center/cover;
+    height: 275px;
+    min-width: 375px ;
+}

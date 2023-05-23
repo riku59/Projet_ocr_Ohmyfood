@@ -1,0 +1,15 @@
+#Lanote{
+        height: 1290px;
+    }
+.footer2 {
+     @include footer ;
+}
+@media (min-width: 767px) {
+    .footer2 {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+}

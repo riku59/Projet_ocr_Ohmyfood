@@ -1,0 +1,43 @@
+
+header {
+    text-align: center;
+    width: 100%;
+     img{
+        width: 162px;
+        display: block;
+        margin: 14px auto 12px;
+    }
+    .location {
+        @include center;
+        background: #eaeaea;
+        height: 50px;
+        gap: 17px;
+        i{
+            color : $gray
+        }
+        p{
+            font-weight: 500; 
+        }
+       
+    }
+    .header {
+        background: $gray1;
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            padding-top: 39px;
+        }
+        p{
+            color : $gray ;
+            font-size: 18px;
+            margin: 12px 0 27px;
+        }
+        button {
+            @include button ;
+            margin-bottom: 57px;
+        &:hover {
+            @include buttonHover ;
+        }
+        }
+    }   
+}

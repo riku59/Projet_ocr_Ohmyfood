@@ -1,0 +1,14 @@
+// le role de index.scss est de rassembler tous les fichiers SASS 
+
+@import "./setting";
+@import"./layout/header";
+@import "./layout/fonction";
+@import "./layout/restaurants" ;
+@import "./layout/footer" ;
+@import "./layout/pages/laPalette/header1" ;
+@import "./layout/pages/laPalette/main1";
+@import "./layout/pages/laPalette/footer1" ;
+@import "./layout/pages/laNote/footer2" ;
+@import "./layout/pages/laNote/header2" ;
+@import "./layout/pages/laFrancaise/header3" ;
+@import "./layout/pages/leDelice/header4" ;

@@ -1,0 +1,36 @@
+footer {
+    background: $gray;
+    color: white;
+   @include footer ;
+    padding: 30px 25px 22px;
+    
+    #font {
+        font-family: $title;
+        font-size: 18px;
+        font-style: italic;
+    }
+    .link{
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        .propose {
+            display: flex;
+        }
+        .partner {
+            display: flex;
+        }
+        i {
+            margin-right: 11px;
+        }
+    }   
+ }
+ @media (min-width: 767px) {
+    footer {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        #font {font-size: 28px;
+        }
+        
+    }
+ }

@@ -1,0 +1,45 @@
+.fonction {
+    margin-bottom: 68px;
+    h2 {
+        padding: 48px 20px 26px ;
+    }
+    .explain1 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 27px;
+        background: var(--gray1);
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 20px;
+        margin-bottom: 25px;
+        margin-left: 32px;
+        width: 85%;
+        height: 72px;
+        &:first-child::before { 
+            @include beforeFonction ;
+            content: "1";  
+        }
+        &:nth-child(2)::before {
+            @include beforeFonction ;
+            content: "2"
+        }
+        &:last-child::before {
+            @include beforeFonction ;
+            content : "3";
+        }
+        &:last-child i {
+            color: $purple;
+        }
+        p {
+            font-weight: 500;
+        }
+        i {
+        color: #7e7e7e;
+        }
+        .fa-solid{
+            font-size : 20px; 
+        }
+        
+    }
+}

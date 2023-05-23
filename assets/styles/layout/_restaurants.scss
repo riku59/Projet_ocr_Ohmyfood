@@ -68,6 +68,30 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-items: center;
+        margin: 0 20px;
+        gap: 50px;
+        .card{
+            width: 100%;
+        }
     }
 }
 }
+@media (min-width: 1440px) {
+    .restaurant{
+    h2 {
+    max-width: 1200px;
+    margin:0 auto 30px;
+    }
+    .restaurants {
+        max-width: 1200px;
+        margin: auto;
+        .card {
+            height: 310px;
+            .card1 img{
+                height: 231px;
+            }
+        }
+        }
+    }
+}
+

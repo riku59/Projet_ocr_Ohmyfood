@@ -184,6 +184,26 @@ header .header button:hover {
   font-size: 20px;
 }
 
+@media (min-width: 900px) {
+  .fonction .explain {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1440px) {
+  .fonction h2 {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .fonction .explain {
+    margin-left: 0;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-evenly;
+  }
+  .fonction .explain .explain1 {
+    max-width: 350px;
+  }
+}
 .restaurant {
   padding: 54px 0;
   background: #f7f7f7;
@@ -282,6 +302,27 @@ header .header button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    margin: 0 20px;
+    gap: 50px;
+  }
+  .restaurant .restaurants .card {
+    width: 100%;
+  }
+}
+@media (min-width: 1440px) {
+  .restaurant h2 {
+    max-width: 1200px;
+    margin: 0 auto 30px;
+  }
+  .restaurant .restaurants {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .restaurant .restaurants .card {
+    height: 310px;
+  }
+  .restaurant .restaurants .card .card1 img {
+    height: 231px;
   }
 }
 footer {

@@ -48,3 +48,29 @@
         }
     }
 }
+@media (min-width: 900px) {
+.fonction .explain {
+   
+    flex-direction: row;
+}
+}
+@media (min-width: 1440px) { 
+    .fonction 
+    {
+     h2{
+        max-width: 1200px;
+        margin: auto;
+     }   
+        .explain {
+        margin-left: 0;
+        max-width: 1200px;
+        
+        
+        margin: auto;
+        justify-content: space-evenly;
+        .explain1 {
+            max-width: 350px;
+        }
+    }
+}
+}

@@ -248,17 +248,30 @@ header .header button:hover {
 .restaurant .restaurants .card .card1 input[type=checkbox] {
   display: none;
 }
-.restaurant .restaurants .card .card1 input[type=checkbox]:checked + label i {
-  color: #9356DC;
+.restaurant .restaurants .card .card1 input[type=checkbox]:checked + label .fa-heart {
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transform: scale(1.1);
 }
 .restaurant .restaurants .card .card1 label {
   position: absolute;
   top: 205px;
   right: 25px;
+  transition: 2s;
 }
 .restaurant .restaurants .card .card1 label i {
   color: gray;
   font-size: 1.5rem;
+}
+.restaurant .restaurants .card .card1 label .fa-solid {
+  font-weight: 900;
+}
+.restaurant .restaurants .card .card1 label .fa-heart {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 .restaurant .restaurants .card #carte1::after {
   position: absolute;
@@ -307,6 +320,9 @@ header .header button:hover {
   }
   .restaurant .restaurants .card {
     width: 100%;
+  }
+  .restaurant .restaurants .card .card1 label {
+    top: 210px;
   }
 }
 @media (min-width: 1440px) {

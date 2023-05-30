@@ -11,6 +11,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "roboto", sans-serif;
+  text-decoration: none;
 }
 
 input[type=checkbox] {
@@ -65,6 +66,10 @@ header .location {
 }
 header .location i {
   color: #353535;
+}
+header .location i:hover {
+  color: #9356DC;
+  cursor: pointer;
 }
 header .location p {
   font-weight: 500;
@@ -128,6 +133,9 @@ header .header button:hover {
   width: 95%;
   max-width: 700px;
   height: 72px;
+}
+.fonction .explain .explain1:hover {
+  background: #f7f7f7;
 }
 .fonction .explain .explain1:first-child::before {
   position: absolute;
@@ -346,30 +354,32 @@ footer {
   color: white;
   position: relative;
   display: flex;
+  font-weight: 900;
   gap: 16px;
   justify-content: flex-end;
   flex-direction: column-reverse;
   width: 100%;
-  height: 186px;
   padding: 30px 25px 22px;
 }
 footer #font {
   font-family: shrikhand, sans-serif;
   font-size: 18px;
   font-style: italic;
+  font-weight: 400;
 }
-footer .link {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
+footer .link ul {
+  list-style: none;
 }
-footer .link .propose {
-  display: flex;
+footer .link ul li {
+  padding: 5px 0 5px 0;
 }
-footer .link .partner {
-  display: flex;
+footer .link ul li .partner i {
+  margin-right: 6px;
 }
-footer .link i {
+footer .link ul a {
+  color: white;
+}
+footer .link ul a i {
   margin-right: 11px;
 }
 
@@ -538,11 +548,11 @@ footer .link i {
 .footer1 {
   position: relative;
   display: flex;
+  font-weight: 900;
   gap: 16px;
   justify-content: flex-end;
   flex-direction: column-reverse;
   width: 100%;
-  height: 186px;
   z-index: 1;
 }
 
@@ -562,11 +572,11 @@ footer .link i {
 .footer2 {
   position: relative;
   display: flex;
+  font-weight: 900;
   gap: 16px;
   justify-content: flex-end;
   flex-direction: column-reverse;
   width: 100%;
-  height: 186px;
 }
 
 @media (min-width: 767px) {

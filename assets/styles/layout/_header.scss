@@ -13,7 +13,11 @@ header {
         height: 50px;
         gap: 17px;
         i{
-            color : $gray
+            color : $gray ;
+            &:hover {
+                color: $purple;
+                cursor: pointer;
+            }
         }
         p{
             font-weight: 500; 

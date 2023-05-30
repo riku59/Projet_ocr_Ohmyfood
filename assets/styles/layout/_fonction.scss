@@ -21,6 +21,9 @@
         width: 95%;
         max-width: 700px;
         height: 72px;
+        &:hover {
+            background: $gray1;
+        }
         &:first-child::before { 
             @include beforeFonction ;
             content: "1";  

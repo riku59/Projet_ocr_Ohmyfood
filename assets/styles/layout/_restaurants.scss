@@ -40,34 +40,16 @@
                 display: none;
             }
             input[type="checkbox"]:checked + label .fa-heart {
-                
                 background: linear-gradient( #9356DC, #FF79DA);
                 background-clip: text;
                 color: transparent;
                 transform: scale(1.1);
-
                }
             label {
                 position: absolute;
                 top: 205px;
                 right: 25px;
                 transition: 2s;
-                i {
-                    color: gray;
-                    font-size: 1.5rem;
-                    
-                 }
-                    .fa-solid {
-                        font-weight: 900;
-                    } 
-                        .fa-heart {
-                            
-                            color: transparent;
-                            -webkit-text-stroke-width: 1px;
-                            -webkit-text-stroke-color: black;
-                        }   
-                 
-               
              }
         }
         #carte1::after   {

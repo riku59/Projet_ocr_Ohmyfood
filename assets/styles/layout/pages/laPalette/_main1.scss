@@ -8,6 +8,15 @@
     border-radius: 25px ;
     display: flex;
     flex-direction: column;
+
+    input[type="checkbox"]:checked + label span{
+        transform: translateX(-50px);
+    
+   #valid {
+        transform: translate(-50px);
+        background: $cyan1;
+    }
+}
     h2 {
         font-family: $title;
         font-style: italic;
@@ -17,6 +26,7 @@
     .card-menu1-head {
         display: flex;
         align-items: center;
+        
         label {
             position: absolute;
             top: 40px;
@@ -41,6 +51,16 @@
                 left: 0;
                 top: 27px;
             }
+            input[type="checkbox"]:checked + label span{
+                transform: translateX(-50px);
+            
+          
+        }
+        input[type="checkbox"]:checked + label #valid{
+            
+            display: inline;
+                transform: translate(-50px);
+                background: $cyan1;
         }
         .card-menus {
             display: flex;
@@ -48,15 +68,7 @@
             transition: 0.5s;
            
             
-             &:hover span{
-                transform: translate(-50px);
-            }
-            &:hover #valid {
-                transform: translate(-50px);
-                background: $cyan1;
-                
-            }
-        }
+        }}
         .card-menu {
             width: 100%;
             background: white;
@@ -112,7 +124,7 @@
     }
  
 
-}  
+
 
  @media (min-width: 767px) {
     .card-menu1 {
@@ -125,4 +137,5 @@
         width: 634px;
     }
 }
+ }
 }

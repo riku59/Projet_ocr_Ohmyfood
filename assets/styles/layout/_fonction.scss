@@ -7,22 +7,24 @@
         display: flex;
         flex-direction: column;
         margin-left: 25px;
+        align-items: center;
     
     .explain1 {
         position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
         gap: 27px;
-        background: var(--gray1);
+        background: $gray1;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 20px;
         margin-bottom: 25px;
         width: 95%;
-        max-width: 700px;
         height: 72px;
         &:hover {
-            background: $gray1;
+            background:  rgba(147, 86, 220, 0.1);
+        }
+        &:hover i {
+            color: $purple;
         }
         &:first-child::before { 
             @include beforeFonction ;
@@ -36,14 +38,12 @@
             @include beforeFonction ;
             content : "3";
         }
-        &:last-child i {
-            color: $purple;
-        }
         p {
-            font-weight: 500;
+            font-weight: 900;
         }
         i {
         color: #7e7e7e;
+        margin-left: 50px;
         }
         .fa-solid{
             font-size : 20px; 
@@ -52,10 +52,7 @@
     }
 }
 @media (min-width: 900px) {
-.fonction .explain {
-   
-    flex-direction: row;
-}
+
 }
 @media (min-width: 1440px) { 
     .fonction 

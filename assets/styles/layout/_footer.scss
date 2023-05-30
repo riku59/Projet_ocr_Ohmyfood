@@ -15,12 +15,16 @@ footer {
            list-style: none;
             li {
                 padding: 5px 0 5px 0;
+             
                 .partner i{
-                    margin-right: 6px;
+                    margin-right: 6px;   
                 }
             }
            a {
             color: white;
+            &:hover{
+                color: $purple;
+            }   
                 i {
                 margin-right: 11px;
                 }
@@ -30,10 +34,11 @@ footer {
  }
  @media (min-width: 767px) {
     footer {
-        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: space-around;
-        align-content: space-around;
-        #font {font-size: 28px;
+        align-items: center;
+        #font {
+            font-size: 28px;
         }
         
     }

@@ -63,7 +63,7 @@ $green:#008766;
     color: $green;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     border-radius: 2px;
-    font-weight: 500;
+    font-weight: 900;
     font-family: "roboto";
     display: flex;
     justify-content: center;
@@ -87,15 +87,26 @@ $green:#008766;
     font-family: "roboto" , sans-serif;
     text-decoration: none;
 }
-
+label i{
+    transition: 2s;
+}
 input[type="checkbox"] {
     display: none;
 }
 input[type="checkbox"]:checked + label i {
- color: $purple;
-}
-label i {  /* erreur */
-    color: gray;
+    background: linear-gradient( #9356DC, #FF79DA);
+    background-clip: text;
+    color: transparent;
+    transform: scale(1.1);
+    
+   }
+   .fa-heart {                        
+    color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    
+}   
+label i {  
     font-size: 1.5rem;   
 }
 body {

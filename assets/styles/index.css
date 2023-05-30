@@ -14,16 +14,29 @@
   text-decoration: none;
 }
 
+label i {
+  transition: 2s;
+}
+
 input[type=checkbox] {
   display: none;
 }
 
 input[type=checkbox]:checked + label i {
-  color: #9356DC;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  transform: scale(1.1);
 }
 
-label i { /* erreur */
-  color: gray;
+.fa-heart {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+label i {
   font-size: 1.5rem;
 }
 
@@ -119,23 +132,25 @@ header .header button:hover {
   display: flex;
   flex-direction: column;
   margin-left: 25px;
+  align-items: center;
 }
 .fonction .explain .explain1 {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 27px;
-  background: var(--gray1);
+  background: #f7f7f7;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   border-radius: 20px;
   margin-bottom: 25px;
   width: 95%;
-  max-width: 700px;
   height: 72px;
 }
 .fonction .explain .explain1:hover {
-  background: #f7f7f7;
+  background: rgba(147, 86, 220, 0.1);
+}
+.fonction .explain .explain1:hover i {
+  color: #9356DC;
 }
 .fonction .explain .explain1:first-child::before {
   position: absolute;
@@ -179,24 +194,17 @@ header .header button:hover {
   font-size: 14px;
   content: "3";
 }
-.fonction .explain .explain1:last-child i {
-  color: #9356DC;
-}
 .fonction .explain .explain1 p {
-  font-weight: 500;
+  font-weight: 900;
 }
 .fonction .explain .explain1 i {
   color: #7e7e7e;
+  margin-left: 50px;
 }
 .fonction .explain .explain1 .fa-solid {
   font-size: 20px;
 }
 
-@media (min-width: 900px) {
-  .fonction .explain {
-    flex-direction: row;
-  }
-}
 @media (min-width: 1440px) {
   .fonction h2 {
     max-width: 1200px;
@@ -269,18 +277,6 @@ header .header button:hover {
   right: 25px;
   transition: 2s;
 }
-.restaurant .restaurants .card .card1 label i {
-  color: gray;
-  font-size: 1.5rem;
-}
-.restaurant .restaurants .card .card1 label .fa-solid {
-  font-weight: 900;
-}
-.restaurant .restaurants .card .card1 label .fa-heart {
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
-}
 .restaurant .restaurants .card #carte1::after {
   position: absolute;
   content: "Nouveau";
@@ -292,7 +288,7 @@ header .header button:hover {
   color: #008766;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
-  font-weight: 500;
+  font-weight: 900;
   font-family: "roboto";
   display: flex;
   justify-content: center;
@@ -310,7 +306,7 @@ header .header button:hover {
   color: #008766;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
-  font-weight: 500;
+  font-weight: 900;
   font-family: "roboto";
   display: flex;
   justify-content: center;
@@ -379,15 +375,18 @@ footer .link ul li .partner i {
 footer .link ul a {
   color: white;
 }
+footer .link ul a:hover {
+  color: #9356DC;
+}
 footer .link ul a i {
   margin-right: 11px;
 }
 
 @media (min-width: 767px) {
   footer {
-    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
-    align-content: space-around;
+    align-items: center;
   }
   footer #font {
     font-size: 28px;
@@ -424,6 +423,13 @@ footer .link ul a i {
   display: flex;
   flex-direction: column;
 }
+.card-menu1 input[type=checkbox]:checked + label span {
+  transform: translateX(-50px);
+}
+.card-menu1 input[type=checkbox]:checked + label span #valid {
+  transform: translate(-50px);
+  background: #99e2d0;
+}
 .card-menu1 h2 {
   font-family: shrikhand, sans-serif;
   font-style: italic;
@@ -459,17 +465,18 @@ footer .link ul a i {
   left: 0;
   top: 27px;
 }
-.card-menu1 .card-choice .card-menus {
+.card-menu1 .card-choice .plat input[type=checkbox]:checked + label span {
+  transform: translateX(-50px);
+}
+.card-menu1 .card-choice .plat input[type=checkbox]:checked + label #valid {
+  display: inline;
+  transform: translate(-50px);
+  background: #99e2d0;
+}
+.card-menu1 .card-choice .plat .card-menus {
   display: flex;
   align-items: center;
   transition: 0.5s;
-}
-.card-menu1 .card-choice .card-menus:hover span {
-  transform: translate(-50px);
-}
-.card-menu1 .card-choice .card-menus:hover #valid {
-  transform: translate(-50px);
-  background: #99e2d0;
 }
 .card-menu1 .card-choice .card-menu {
   width: 100%;
@@ -528,19 +535,19 @@ footer .link ul a i {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
   cursor: pointer;
 }
-
 @media (min-width: 767px) {
-  .card-menu1 {
+  .card-menu1 .card-menu1 {
     align-items: center;
   }
-  .card-menu1 .card-menu1-head label {
+  .card-menu1 .card-menu1 .card-menu1-head label {
     position: static;
     margin-left: 24px;
   }
-  .card-menu1 .card-choice .card-menu {
+  .card-menu1 .card-menu1 .card-choice .card-menu {
     width: 634px;
   }
 }
+
 .rect {
   height: 1200px;
 }

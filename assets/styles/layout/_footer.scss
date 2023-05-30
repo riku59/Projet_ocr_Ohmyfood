@@ -43,3 +43,23 @@ footer {
         
     }
  }
+ @media (min-width: 1440px) {
+    footer {
+        justify-content: flex-end;
+        padding: 64px 25px 31px;
+        #font{
+            font-size: 18px;
+            margin: 0 50px 10px;
+        }
+        .link {
+            ul {
+                display: flex;
+                gap: 15px;
+                :nth-child(2) {
+                    margin-right: 30px;
+                }
+            }
+            
+        }
+    }
+}

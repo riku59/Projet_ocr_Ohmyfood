@@ -1,5 +1,5 @@
 .fonction {
-    margin-bottom: 68px;
+    margin-bottom: 67px;
     h2 {
         padding: 48px 20px 26px ;
     }
@@ -55,21 +55,24 @@
 
 }
 @media (min-width: 1440px) { 
-    .fonction 
-    {
+    .fonction {
+        margin-bottom: 50px;
      h2{
         max-width: 1200px;
         margin: auto;
      }   
         .explain {
         margin-left: 0;
-        max-width: 1200px;
         
+        max-width: 1200px;
+        flex-direction: row;
         
         margin: auto;
-        justify-content: space-evenly;
+        justify-content: space-around;
         .explain1 {
+            margin-bottom: 0;
             max-width: 350px;
+            
         }
     }
 }

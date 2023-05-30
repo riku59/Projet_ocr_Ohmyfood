@@ -88,18 +88,11 @@ $green:#008766;
     text-decoration: none;
 }
 label i{
-    transition: 2s;
+    // transition: 2s;
 }
 input[type="checkbox"] {
     display: none;
 }
-input[type="checkbox"]:checked + label i {
-    background: linear-gradient( #9356DC, #FF79DA);
-    background-clip: text;
-    color: transparent;
-    transform: scale(1.1);
-    
-   }
    .fa-heart {                        
     color: transparent;
     -webkit-text-stroke-width: 1px;

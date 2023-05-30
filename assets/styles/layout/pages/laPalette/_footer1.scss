@@ -14,3 +14,17 @@
         align-items: center;
     }
 }
+@media (min-width: 1440px) {
+    footer {
+        .footer1{
+        justify-content: flex-end;
+        }
+        .link {
+            ul {
+                display: flex;
+                gap: 15px;
+            }
+            
+        }
+    }
+}

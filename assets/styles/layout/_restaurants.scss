@@ -92,9 +92,15 @@
         margin: auto;
         .card {
             height: 310px;
-            .card1 img{
-                height: 231px;
+            .card1 {
+                img{
+                    height: 231px;
+                }
+                label{
+                top: 250px;
             }
+            }
+            
         }
         }
     }

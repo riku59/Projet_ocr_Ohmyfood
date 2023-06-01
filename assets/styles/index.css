@@ -14,6 +14,10 @@
   text-decoration: none;
 }
 
+label i {
+  transition: 0.5s;
+}
+
 input[type=checkbox] {
   display: none;
 }
@@ -39,6 +43,24 @@ body {
   margin: 0 auto;
   font-family: allura, sans-serif;
   height: 100%;
+}
+body:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #9356DC;
+  animation: anim 5s forwards;
+  animation-delay: 0.25s;
+  z-index: 3;
+}
+@keyframes anim {
+  to {
+    opacity: 0;
+    z-index: -2;
+  }
 }
 body img {
   width: 100%;
@@ -268,7 +290,6 @@ header .header button:hover {
   position: absolute;
   top: 205px;
   right: 25px;
-  transition: 2s;
 }
 .restaurant .restaurants .card #carte1::after {
   position: absolute;

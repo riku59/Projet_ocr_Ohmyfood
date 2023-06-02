@@ -27,6 +27,16 @@
     background-repeat: no-repeat;
   }
 }
+@keyframes entree {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
 * {
   padding: 0;
   margin: 0;
@@ -495,6 +505,24 @@ footer .link ul a i {
   flex-direction: column;
   max-width: 1050px;
 }
+.card-menu1 .card-entree {
+  animation: entree 1s forwards;
+  gap: 13px;
+  display: flex;
+  flex-direction: column;
+}
+.card-menu1 .card-plat {
+  animation: entree 2s forwards;
+  gap: 13px;
+  display: flex;
+  flex-direction: column;
+}
+.card-menu1 .card-dessert {
+  animation: entree 3s forwards;
+  gap: 13px;
+  display: flex;
+  flex-direction: column;
+}
 .card-menu1 .card-menus {
   display: flex;
   align-items: center;
@@ -574,7 +602,7 @@ footer .link ul a i {
   box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
   border-radius: 15.0431px;
   display: grid;
-  grid-template-columns: 95% 5%;
+  grid-template-columns: 90% 10%;
   grid-template-areas: "a1  a1" "a2  a3";
   padding: 15px;
   gap: 5px;
@@ -627,37 +655,39 @@ footer .link ul a i {
   cursor: pointer;
 }
 @media (min-width: 767px) {
-  .card-menu1 .card-menu1 {
+  .card-menu1 {
     align-items: center;
-  }
-  .card-menu1 .card-menu1 .card-menu1-head label {
-    position: static;
-    margin-left: 24px;
-  }
-  .card-menu1 .card-menu1 .card-choice .card-menu {
-    width: 634px;
-  }
-}
-@media (min-width: 1050px) {
-  .card-menu1 .card-menu1-head {
-    justify-content: center;
   }
   .card-menu1 .card-menu1-head label {
     position: static;
-    margin-left: 30px;
+    margin-left: 24px;
   }
-  .card-menu1 .card-choice {
-    align-items: center;
-    text-align: left;
-  }
-  .card-menu1 .card-choice .plat {
+  .card-menu1 .card-choice .card-menu {
     width: 634px;
-  }
-  .card-menu1 .card-choice .card-menus {
-    width: 634px;
+    display: grid;
+    grid-template-columns: 95% 5%;
   }
 }
 
+@media (min-width: 1050px) {
+  .card-menu1-head {
+    justify-content: center;
+  }
+  .card-menu1-head label {
+    position: static;
+    margin-left: 30px;
+  }
+  .card-choice {
+    align-items: center;
+    text-align: left;
+  }
+  .card-choice .plat {
+    width: 634px;
+  }
+  .card-choice .card-menus {
+    width: 634px;
+  }
+}
 .rect {
   height: 1200px;
 }

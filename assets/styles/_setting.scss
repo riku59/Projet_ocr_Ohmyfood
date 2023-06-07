@@ -135,6 +135,7 @@ label i {
     font-size: 1.5rem;   
 }
 body {
+    overflow-x: hidden;
     display: flex ;
     flex-direction: column;
     align-items: center;
@@ -189,6 +190,15 @@ img {
 }
 main {
     width: 100%;
+}
+.fa-heart:hover{
+    cursor: pointer;
+}
+.card:hover {
+    cursor: pointer;
+}
+.card-menu:hover{
+    cursor: pointer;
 }
 
 }

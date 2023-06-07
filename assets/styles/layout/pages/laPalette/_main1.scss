@@ -30,6 +30,7 @@
     .card-menus {
         display: flex;
         align-items: center;
+        width: 108%;
         
         label {
             display: flex;
@@ -37,10 +38,15 @@
         }
     }
 
-    input[type="checkbox"]:checked + label span{
+    input[type="checkbox"]:checked + label{
+        span{
         transform: translateX(-50px);
-    
-   }
+        }
+        p,h3{
+            width: 75%;
+        }
+
+} 
     input[type="checkbox"]:checked + label #valid{
             
                 transform: translate(-50px);
@@ -49,6 +55,7 @@
                     background: white;
                     color: $cyan1;
                 }
+                
         }
 
         
@@ -121,10 +128,16 @@
                 grid-area: a1;
                 font-weight: 500;
                 font-size: 18px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             p{
                 grid-area: a2;
                 font-size: 15px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             span{
                 grid-area: a3;

@@ -37,10 +37,10 @@ footer {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        #font {
-            font-size: 28px;
+        ul{
+            display: flex;
+            gap: 13px;
         }
-        
     }
  }
  @media (min-width: 1440px) {

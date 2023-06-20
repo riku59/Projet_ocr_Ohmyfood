@@ -336,7 +336,7 @@ header .header button:hover {
   display: none;
 }
 .restaurant .restaurants .card .card1 input[type=checkbox]:checked + label .fa-heart {
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;

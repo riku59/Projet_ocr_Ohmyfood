@@ -1,108 +1,105 @@
 .restaurant {
-    padding: 54px 0 ;
-    background: $gray1;
-    padding-bottom: 66px;
-     h2 {
-        margin-bottom: 20px;  
-        margin-left: 20px;
+  padding: 54px 0;
+  background: $gray1;
+  padding-bottom: 66px;
+  h2 {
+    margin-bottom: 20px;
+    margin-left: 20px;
+  }
+  .restaurants {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+
+      .card1 {
+        position: relative;
+        background: white;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        img {
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+          height: 180px;
+          object-fit: cover;
         }
-    .restaurants {
-        display: flex;
-        flex-direction: column;
-        gap: 18px;
-        align-items: center;
-    
-   .card {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-       
-        .card1 {
-            position: relative;
-            background: white;
-            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 15px;
-            img { 
-                border-top-left-radius: 15px ;
-                border-top-right-radius: 15px;  
-                height: 180px; 
-                object-fit: cover;
-            }
-            h3 {
-                font-size: 18px;
-                margin: 16px 0 5px 13px;
-            }
-            p {
-                font-size: 17px;
-                margin: 0 0 12px 13px;
-            }
-            input[type="checkbox"] {
-                display: none;
-            }
-            input[type="checkbox"]:checked + label .fa-heart {
-                background: linear-gradient( #9356DC, #FF79DA);
-                background-clip: text;
-                color: transparent;
-                transform: scale(1.1);
-                animation: like 0.5s linear forwards;
-               }
-            label {
-                position: absolute;
-                top: 205px;
-                right: 25px;
-             }
+        h3 {
+          font-size: 18px;
+          margin: 16px 0 5px 13px;
         }
-        #carte1::after   {
-            @include new ;
+        p {
+          font-size: 17px;
+          margin: 0 0 12px 13px;
         }
-        #carte2::after {
-            @include new ;
+        input[type="checkbox"] {
+          display: none;
         }
+        input[type="checkbox"]:checked + label .fa-heart {
+          background: linear-gradient(#9356dc, #ff79da);
+          background-clip: text;
+          color: transparent;
+          transform: scale(1.1);
+          animation: like 0.5s linear forwards;
+        }
+        label {
+          position: absolute;
+          top: 205px;
+          right: 25px;
+        }
+      }
+      #carte1::after {
+        @include new;
+      }
+      #carte2::after {
+        @include new;
+      }
     }
-    }
+  }
 }
 @media (min-width: 767px) {
-    .restaurant {
-
+  .restaurant {
     .restaurants {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-items: center;
-        margin: 0 20px;
-        gap: 50px;
-        .card{
-            width: 100%;
-            .card1{
-                label {
-                top: 210px;
-                }
-            }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+      margin: 0 20px;
+      gap: 50px;
+      .card {
+        width: 100%;
+        .card1 {
+          label {
+            top: 210px;
+          }
         }
+      }
     }
-}
+  }
 }
 @media (min-width: 1440px) {
-    .restaurant{
+  .restaurant {
     h2 {
-    max-width: 1200px;
-    margin:0 auto 30px;
+      max-width: 1200px;
+      margin: 0 auto 30px;
     }
     .restaurants {
-        max-width: 1200px;
-        margin: auto;
-        .card {
-            height: 310px;
-            .card1 {
-                img{
-                    height: 231px;
-                }
-                label{
-                top: 250px;
-            }
-            }
-            
+      max-width: 1200px;
+      margin: auto;
+      .card {
+        height: 310px;
+        .card1 {
+          img {
+            height: 231px;
+          }
+          label {
+            top: 250px;
+          }
         }
-        }
+      }
     }
+  }
 }
-

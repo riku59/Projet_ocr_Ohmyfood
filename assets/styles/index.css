@@ -98,7 +98,7 @@ body .loading {
     z-index: -2;
   }
 }
-body #load {
+body .loading #load {
   position: absolute;
   height: 100px;
   width: 100px;
@@ -146,7 +146,7 @@ header .location i {
   color: #353535;
 }
 header .location i:hover {
-  color: #9356DC;
+  color: #9356dc;
   cursor: pointer;
 }
 header .location p {
@@ -154,6 +154,27 @@ header .location p {
 }
 header .header {
   background: #f7f7f7;
+  padding-bottom: 57px;
+}
+header .header .explore {
+  font-size: 16px;
+  font-weight: 500;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 0 auto;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header .explore:hover {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
 }
 header .header h1 {
   font-size: 24px;
@@ -175,14 +196,14 @@ header .header button {
   height: 50px;
   border-radius: 25px;
   margin: 0 auto;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
   color: white;
   margin-bottom: 57px;
 }
 header .header button:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
   cursor: pointer;
 }
@@ -216,14 +237,14 @@ header .header button:hover {
   background: rgba(147, 86, 220, 0.1);
 }
 .fonction .explain .explain1:hover i {
-  color: #9356DC;
+  color: #9356dc;
 }
 .fonction .explain .explain1:first-child::before {
   position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #9356DC;
+  background: #9356dc;
   height: 24px;
   width: 24px;
   border-radius: 24px;
@@ -237,7 +258,7 @@ header .header button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #9356DC;
+  background: #9356dc;
   height: 24px;
   width: 24px;
   border-radius: 24px;
@@ -251,7 +272,7 @@ header .header button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #9356DC;
+  background: #9356dc;
   height: 24px;
   width: 24px;
   border-radius: 24px;
@@ -450,7 +471,7 @@ footer .link ul a {
   color: white;
 }
 footer .link ul a:hover {
-  color: #9356DC;
+  color: #9356dc;
 }
 footer .link ul a i {
   margin-right: 11px;
@@ -543,17 +564,20 @@ footer .link ul a i {
   display: flex;
   width: 100%;
 }
-.card-menu1 input[type=checkbox]:checked + label span {
+.card-menu1 input[type=checkbox]:checked + label .prix {
   transform: translateX(-50px);
 }
-.card-menu1 input[type=checkbox]:checked + label p, .card-menu1 input[type=checkbox]:checked + label h3 {
+.card-menu1 input[type=checkbox]:checked + label .sous-titre {
+  width: 70%;
+}
+.card-menu1 input[type=checkbox]:checked + label .description-plat {
   width: 75%;
 }
-.card-menu1 input[type=checkbox]:checked + label #valid {
+.card-menu1 input[type=checkbox]:checked + label .valid {
   transform: translate(-50px);
   background: #99e2d0;
 }
-.card-menu1 input[type=checkbox]:checked + label #valid i {
+.card-menu1 input[type=checkbox]:checked + label .valid i {
   background: white;
   color: #99e2d0;
 }
@@ -568,7 +592,7 @@ footer .link ul a i {
   align-items: center;
 }
 .card-menu1 .card-menu1-head input[type=checkbox]:checked + label .fa-heart {
-  background: linear-gradient(#9356DC, #FF79DA);
+  background: linear-gradient(#9356dc, #ff79da);
   -webkit-background-clip: text;
           background-clip: text;
   color: transparent;
@@ -600,7 +624,7 @@ footer .link ul a i {
   left: 0;
   top: 27px;
 }
-.card-menu1 .card-choice .plat input[type=checkbox]:checked + label #valid i {
+.card-menu1 .card-choice .plat input[type=checkbox]:checked + label .valid i {
   background: white;
   color: #99e2d0;
 }
@@ -622,27 +646,29 @@ footer .link ul a i {
   padding: 15px;
   gap: 5px;
 }
-.card-menu1 .card-choice .card-menu h3 {
+.card-menu1 .card-choice .card-menu .sous-titre {
   grid-area: a1;
+  width: 80%;
   font-weight: 500;
   font-size: 18px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.card-menu1 .card-choice .card-menu p {
+.card-menu1 .card-choice .card-menu .description-plat {
   grid-area: a2;
   font-size: 15px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  width: 90%;
 }
-.card-menu1 .card-choice .card-menu span {
+.card-menu1 .card-choice .card-menu .prix {
   grid-area: a3;
   font-weight: 700;
   transition: 0.4s;
 }
-.card-menu1 .card-choice #valid {
+.card-menu1 .card-choice .valid {
   background: var(--gray1);
   width: 59px;
   height: 77px;
@@ -652,7 +678,7 @@ footer .link ul a i {
   justify-content: center;
   align-items: center;
 }
-.card-menu1 .card-choice #valid i {
+.card-menu1 .card-choice .valid i {
   color: #f7f7f7;
   border-radius: 100px;
   font-size: 1.5rem;
@@ -664,14 +690,14 @@ footer .link ul a i {
   height: 50px;
   border-radius: 25px;
   margin: 0 auto;
-  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   border: none;
   color: white;
   margin: 40px auto;
 }
 .card-menu1 .card-choice button:hover {
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
   cursor: pointer;
 }

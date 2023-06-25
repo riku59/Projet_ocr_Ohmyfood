@@ -1,80 +1,77 @@
 .fonction {
-    padding-bottom: 67px;
-    background: white;
-    h2 {
-        padding: 48px 20px 26px ;
-    }
-    .explain {
-        display: flex;
-        flex-direction: column;
-        margin-left: 25px;
-        align-items: center;
-    
+  padding-bottom: 67px;
+  background: white;
+  h2 {
+    padding: 48px 20px 26px;
+  }
+  .explain {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    align-items: center;
     .explain1 {
-        position: relative;
-        display: flex;
-        align-items: center;
-        gap: 27px;
-        background: $gray1;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-        border-radius: 20px;
-        margin-bottom: 25px;
-        width: 95%;
-        height: 72px;
-        &:hover {
-            background:  rgba(147, 86, 220, 0.1);
-        }
-        &:hover i {
-            color: $purple;
-        }
-        &:first-child::before { 
-            @include beforeFonction ;
-            content: "1";  
-        }
-        &:nth-child(2)::before {
-            @include beforeFonction ;
-            content: "2"
-        }
-        &:last-child::before {
-            @include beforeFonction ;
-            content : "3";
-        }
-        p {
-            font-weight: 900;
-        }
-        i {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      background: $gray1;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      margin-bottom: 25px;
+      width: 95%;
+      height: 72px;
+      &:hover {
+        background: rgba(147, 86, 220, 0.1);
+      }
+      &:hover i {
+        color: $purple;
+      }
+      &:first-child::before {
+        @include beforeFonction;
+        content: "1";
+      }
+      &:nth-child(2)::before {
+        @include beforeFonction;
+        content: "2";
+      }
+      &:last-child::before {
+        @include beforeFonction;
+        content: "3";
+      }
+      p {
+        font-weight: 900;
+      }
+      i {
         color: #7e7e7e;
         margin-left: 50px;
-        }
-        .fa-solid{
-            font-size : 20px; 
-        }
-        }
+      }
+      .fa-solid {
+        font-size: 20px;
+      }
     }
+  }
 }
 @media (min-width: 900px) {
-
 }
-@media (min-width: 1440px) { 
-    .fonction {
-        padding-bottom: 50px;
-     h2{
-        max-width: 1200px;
-        margin: auto;
-     }   
-        .explain {
-        margin-left: 0;
-        
-        max-width: 1200px;
-        flex-direction: row;
-        
-        margin: auto;
-        justify-content: space-around;
-        .explain1 {
-            margin-bottom: 0;
-            max-width: 350px;
-            
-        }
+@media (min-width: 1440px) {
+  .fonction {
+    padding-bottom: 50px;
+    h2 {
+      max-width: 1200px;
+      margin: auto;
     }
-}
+    .explain {
+      margin-left: 0;
+
+      max-width: 1200px;
+      flex-direction: row;
+
+      margin: auto;
+      justify-content: space-around;
+      .explain1 {
+        margin-bottom: 0;
+        max-width: 350px;
+      }
+    }
+  }
 }

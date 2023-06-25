@@ -1,204 +1,202 @@
 @font-face {
-    font-family: "roboto" ;
-    src: url(../fonts/Roboto-Light.ttf);
+  font-family: "roboto";
+  src: url(../fonts/Roboto-Light.ttf);
 }
 @font-face {
-    font-family: "shrikhand";
-    src: url(../fonts/Shrikhand-Regular.ttf);
+  font-family: "shrikhand";
+  src: url(../fonts/Shrikhand-Regular.ttf);
 }
 
-$font1: allura, sans-serif ;
-$title: shrikhand, sans-serif ;
-$gray : #353535 ;
-$gray1 : #f7f7f7;
-$purple: #9356DC;
-$cyan1:#99e2d0;
-$cyan2:#89c8fa;
-$blue:#003a68;
-$green:#008766;
+$font1: allura, sans-serif;
+$title: shrikhand, sans-serif;
+$gray: #353535;
+$gray1: #f7f7f7;
+$purple: #9356dc;
+$cyan1: #99e2d0;
+$cyan2: #89c8fa;
+$blue: #003a68;
+$green: #008766;
 
 @mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @mixin button {
-        font-size: 16px;
-        font-weight: 500;
-        width: 218px;
-        height: 50px;
-        border-radius: 25px;
-        margin: 0 auto;
-        background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-        border: none;
-        color: white;
+  font-size: 16px;
+  font-weight: 500;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  margin: 0 auto;
+  background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border: none;
+  color: white;
 }
 @mixin buttonHover {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.15)), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    cursor: pointer;
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.15)
+    ),
+    linear-gradient(200.64deg, #9356dc -5.2%, #ff79da 110.74%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
 }
 @mixin beforeFonction {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: $purple;
-    height: 24px;
-    width: 24px;
-    border-radius: 24px;
-    left: -12px;
-    color: white;
-    font-size: 14px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $purple;
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  left: -12px;
+  color: white;
+  font-size: 14px;
 }
 @mixin new {
-    position: absolute;
-    content: "Nouveau";
-    width: 80px;;
-    height: 29px;
-    top: 20px;
-    right: 25px;
-    background: $cyan1;
-    color: $green;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 2px;
-    font-weight: 900;
-    font-family: "roboto";
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
+  position: absolute;
+  content: "Nouveau";
+  width: 80px;
+  height: 29px;
+  top: 20px;
+  right: 25px;
+  background: $cyan1;
+  color: $green;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+  font-weight: 900;
+  font-family: "roboto";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
 }
 @mixin footer {
-    position: relative;
-    display: flex;
-    font-weight: 900;
-    gap: 16px;
-    justify-content: flex-end;
-    flex-direction: column-reverse;
-    width: 100%;
-    // height: 186px;
+  position: relative;
+  display: flex;
+  font-weight: 900;
+  gap: 16px;
+  justify-content: flex-end;
+  flex-direction: column-reverse;
+  width: 100%;
+  // height: 186px;
 }
 @keyframes loader {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    50%{
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
 }
-@keyframes like { // permet de mettre la couleur de fond qui se rempli progressivement.
-    from {
-        background-position-y: 25px ;
-        background-repeat: no-repeat;
-    }
-    to {
-        background-position-y: 0px;
-        background-repeat: no-repeat;
-    }
-    
+@keyframes like {
+  // permet de mettre la couleur de fond qui se rempli progressivement.
+  from {
+    background-position-y: 25px;
+    background-repeat: no-repeat;
+  }
+  to {
+    background-position-y: 0px;
+    background-repeat: no-repeat;
+  }
 }
 @keyframes entree {
-    from {
-        opacity: 0;
-        transform: translateX(-50%);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0%);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "roboto" , sans-serif;
-    text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "roboto", sans-serif;
+  text-decoration: none;
 }
-label i{
-    transition: 0.5s;
+label i {
+  transition: 0.5s;
 }
+
 input[type="checkbox"] {
-    display: none;
+  display: none;
 }
-   .fa-heart {                        
-    color: transparent;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-    
-}   
-label i {  
-    font-size: 1.5rem;   
+.fa-heart {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+label i {
+  font-size: 1.5rem;
 }
 body {
-    overflow-x: hidden;
-    display: flex ;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    position: relative;
-    min-width: 360px;
-    margin: 0 auto;
-    font-family: $font1;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  position: relative;
+  min-width: 360px;
+  margin: 0 auto;
+  font-family: $font1;
+  height: 100%;
+  .loading {
+    position: absolute;
     height: 100%;
-    .loading{
-        
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
-        background: rgba(147, 86, 220, 0.7) ;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(147, 86, 220, 0.7);
+    z-index: 1;
+    animation: anim 3s forwards;
+    animation-delay: 0.25s;
+    @keyframes anim {
+      0% {
         z-index: 1;
-        animation: anim 3s forwards;
-        animation-delay: 0.25s;
-              
+      }
+      99% {
+        z-index: 1;
+      }
+      100% {
+        z-index: -2;
+      }
+    }
 
-        @keyframes anim {
-           0%{
-            z-index: 1;
-           } 
-           99% {
-            z-index: 1;
-           }
-           100% {
-            z-index: -2;
-           }
-          
-            
-        }
-    }
     #load {
-        position: absolute;
-        height: 100px;
-        width: 100px;
-        filter: drop-shadow(0px 6px 3px $cyan1);
-        top: 50%;
-        left: 50%;
-        animation: loader 3s 2 both;
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      filter: drop-shadow(0px 6px 3px $cyan1);
+      top: 50%;
+      left: 50%;
+      animation: loader 3s 2 both;
     }
-img {
+  }
+  img {
     width: 100%;
     background: center/cover;
-    
-    
-}
-main {
+  }
+  main {
     width: 100%;
-}
-.fa-heart:hover{
+  }
+  .fa-heart:hover {
     cursor: pointer;
-}
-.card:hover {
+  }
+  .card:hover {
     cursor: pointer;
-}
-.card-menu:hover{
+  }
+  .card-menu:hover {
     cursor: pointer;
-}
-
+  }
 }

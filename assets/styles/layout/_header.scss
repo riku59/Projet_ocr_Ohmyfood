@@ -1,52 +1,62 @@
-
 header {
-    text-align: center;
-    width: 100%;
-    background: white;
-     img{
-        width: 162px;
-        display: block;
-        margin: 14px auto 12px;
+  text-align: center;
+  width: 100%;
+  background: white;
+
+  img {
+    width: 162px;
+    display: block;
+    margin: 14px auto 12px;
+  }
+  .location {
+    @include center;
+    background: #eaeaea;
+    height: 50px;
+    gap: 17px;
+    i {
+      color: $gray;
+      &:hover {
+        color: $purple;
+        cursor: pointer;
+      }
     }
-    .location {
-        @include center;
-        background: #eaeaea;
-        height: 50px;
-        gap: 17px;
-        i{
-            color : $gray ;
-            &:hover {
-                color: $purple;
-                cursor: pointer;
-            }
-        }
-        p{
-            font-weight: 500; 
-        }
-       
+    p {
+      font-weight: 500;
     }
-    .header {
-        background: $gray1;
-        h1 {
-            font-size: 24px;
-            font-weight: 700;
-            padding-top: 39px;
-            width: 75%;
-            margin: 0 auto;
-        }
-        p{
-            color : $gray ;
-            font-size: 18px;
-            margin: 12px auto 27px;
-            width: 87%;
-            
-        }
-        button {
-            @include button ;
-            margin-bottom: 57px;
-        &:hover {
-            @include buttonHover ;
-        }
-        }
-    }   
+  }
+  .header {
+    background: $gray1;
+    padding-bottom: 57px;
+    .explore {
+      @include button;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        @include buttonHover;
+      }
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      padding-top: 39px;
+      width: 75%;
+      margin: 0 auto;
+    }
+    p {
+      color: $gray;
+      font-size: 18px;
+      margin: 12px auto 27px;
+      width: 87%;
+    }
+    button {
+      @include button;
+      margin-bottom: 57px;
+      &:hover {
+        @include buttonHover;
+      }
+    }
+  }
 }
